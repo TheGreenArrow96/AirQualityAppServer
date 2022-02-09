@@ -21,14 +21,13 @@ app.get('/', (req, res) => {
 
 io.on('connection', (socket) => {
     console.log('a user connected');
-    setTimeout(loop, 10000);
     socket.on('disconnect', () => {
         console.log('user disconnected');
     });
 });
 
 
-//setTimeout(loop, 10000);
+setTimeout(loop, 10000);
 
 function loop() {
     console.log('Started timer');
